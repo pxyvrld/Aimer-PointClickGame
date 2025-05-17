@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aimer</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+<body>
+    <header>
+        <div id="logo"></div>
+        <h1>Aimer</h1>
+    </header>
+
+    <main>
+        <div id="start-screen">
+            <label for="player-name-input">Player name:</label>
+            <input type="text" id="player-name-input" value="Player" />
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <button id="start-button">Start</button>
+            <h3>Highscores</h3>
+            <table id="highscores-table" border="1">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Score</th>
+                        <th>Time Left (s)</th>
+                        <th>Lives Left</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div id="game-screen" style="display:none;">
+            <div id="hud">
+                <span id="score">Score: 0</span>
+                <span id="lives">Lives: 3</span>
+                <span id="timer">Time: 60</span>
+            </div>
+            <div id="game-board"></div>
+        </div>
+
+        <div id="end-screen" style="display:none;">
+            <h2>Game Over</h2>
+            <p id="final-score">Score: </p>
+            <p id="final-lives">Lives left: </p>
+            <p id="final-time">Time left: </p>
+            <button id="restart-button">Restart</button>
+        </div>
+    </main>
+
+    <footer>
+        &copy; Game by Hubert Jucha
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
